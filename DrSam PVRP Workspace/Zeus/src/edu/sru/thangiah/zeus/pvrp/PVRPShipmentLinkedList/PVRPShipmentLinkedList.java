@@ -8,7 +8,7 @@
 
 
 //PACKAGE TITLE
-package edu.sru.thangiah.zeus.pvrp.PVRPShipmentLinkedList;
+package edu.sru.thangiah.zeus.pvrp.pvrpshipmentlinkedlist;
 
 
 //IMPORTS
@@ -20,8 +20,10 @@ import edu.sru.thangiah.zeus.pvrp.PVRPDepotLinkedList;
 import edu.sru.thangiah.zeus.pvrp.PVRPShipment;
 
 import java.io.PrintStream;
+
 import edu.sru.thangiah.zeus.core.ProblemInfo;
-import edu.sru.thangiah.zeus.pvrp.PVRPShipmentLinkedList.PVRPShipmentLinkedList;
+import edu.sru.thangiah.zeus.pvrp.pvrpshipmentlinkedlist.PVRPShipmentLinkedList;
+
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFRow;

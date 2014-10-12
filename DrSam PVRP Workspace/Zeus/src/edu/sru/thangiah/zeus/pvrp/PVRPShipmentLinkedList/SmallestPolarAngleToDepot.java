@@ -8,7 +8,7 @@
 
 
 //PACKAGE TITLE
-package edu.sru.thangiah.zeus.pvrp.PVRPShipmentLinkedList;
+package edu.sru.thangiah.zeus.pvrp.pvrpshipmentlinkedlist;
 
 
 //IMPORTS
