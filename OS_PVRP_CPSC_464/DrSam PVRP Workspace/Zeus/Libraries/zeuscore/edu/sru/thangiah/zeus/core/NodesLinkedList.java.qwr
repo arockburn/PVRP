@@ -1,0 +1,653 @@
+package edu.sru.thangiah.zeus.core;
+
+
+/**
+ * Maintains all of the Nodess of a truck route.
+ * Title: NodesLinkedList
+ * Description: This class maintains all of the Nodess of a truck route.  The
+ *              first and last Nodess are always the first depot and last
+ *              depot of the truck route. Further information about each of the Nodess
+ *              is stored in the Nodes class.
+ * Copyright: Copyright (c) 2003
+ * @author Sam R. Thangiah - original Zeus model,
+ *         Bryan Wilson - SBVRP modifications,
+ *         Anthony Pitluga - SBVRP modifications
+ * @version 1.0
+ */
+abstract public class NodesLinkedList  implements java.io.Serializable,
+    java.lang.Cloneable {
+    protected Nodes head;
+    protected Nodes tail;
+    protected int truckNum;
+    protected TruckType truckType;
+    protected boolean collapsed = false;
+    public Attributes attributes = new Attributes();
+    protected Feasibility feasibility;
+
+    /**
+     * Default constructor.
+     */
+    /*public NodesLinkedList(){
+
+    }*/
+
+    /**
+     * Constructor
+     * @param tT truck type
+     * @param depotX depot x-coordinate
+     * @param depotY depot y-coordinate
+     */
+    /*public NodesLinkedList(TruckType tT, float depotX, float depotY, int tN) {
+        truckType = tT;
+        truckNum  = tN;
+        //feasibility = new Feasibility(truckType.getMaxDuration(),
+        //        truckType.getMaxCapacity(), this);
+        //head = new Nodes(new Shipment(0, depotX, depotY, 0, 0, "D", "D"));
+        //tail = new Nodes(new Shipment(-1, depotX, depotY, 0, 0, "D", "D"));
+        //head.setNext(tail);
+        //tail.setPrev(head);
+    }*/
+
+    //abstract public boolean insertShipment(Shipment theShipment);
+
+    /**
+     * Return the reference to feasible.
+     * @return Feasibility
+     */
+    public Feasibility getFeasibility() {
+        return feasibility;
+    }
+    //This is a stub
+  //The concrete method will be defined by the class inheriting this class
+   public boolean getInsertShipment(NodesLinkedList currNodeLL,
+                                     Shipment theShipment) {
+      return false;
+    }
+
+    /**
+     * Returns the first cell in the linked list
+     * @return first cell
+     */
+    public Nodes getHead() {
+        return head;
+    }
+
+    /**
+     * Returns the last cell in the linked list
+     * @return last cell
+     */
+    public Nodes getTail() {
+        return tail;
+    }
+
+    /**
+     * Returns the current cost of the route (will not be updated for any new
+     * changes)
+     * @return current cost
+     */
+    public double getCost() {
+        return attributes.totalCost;
+    }
+
+    /**
+     * Gets the truck type servicing this route
+     * @return truck type
+     */
+    public TruckType getTruckType() {
+        return truckType;
+    }
+
+    /**
+     * Return if the route has been collapsed or not
+     * @return true- collapsed, false- not collapsed
+     */
+    public boolean isCollapsed() {
+        return collapsed;
+    }
+
+    /**
+     * Calculates the number of point cell in the list
+     * @return number of point cells
+     */
+    public int getSize() {
+        int size = 0;
+        Nodes cell = head;
+
+        while (cell != null) {
+            size++;
+            cell = cell.getNext();
+        }
+
+        return size;
+    }
+
+    /**
+     * Removes all shipments from the linked list
+     */
+    public void emptyList() {
+        head.setNext(tail);
+        tail.setPrev(head);
+    }
+
+
+
+    /**
+     * Gets the actual size for the route if it has been collapsed. Will return
+     * the actual demand + the two depots
+     * @return the size of the route
+     */
+    public int getCollapsedSize() {
+        Nodes tempCell = head.getNext();
+        int count = 0;
+
+        while (tempCell != tail) {
+            if ((tempCell != head) && (tempCell != tail)) {
+                count += tempCell.getDemand();
+            } else {
+                count++;
+            }
+
+            tempCell = tempCell.getNext();
+        }
+
+        return count;
+    }
+
+    /**
+        * Inserts a shipment into the route, creating a new Nodes for the
+        * Shipment. Will attempt to put the newly created point cell into every
+        * possible location in the route in an attempt to find the best possible
+        * initial solution.
+        * @param theShipment the shipment to insert
+        * @return true if inserted, false if not
+        */
+
+    /**
+     * Same as insertShipmentSBVRP except the insertion parameter must be specified
+     * as a point cell and also the previous point cell is returned.
+     * @param insertNode Nodes that is to be inserted into the route
+     * @return Nodes that is previous to the inserted Nodes.
+     */
+    public Nodes insertNodes(Nodes insertNode) {
+        boolean isDiagnostic = false;
+        Nodes pcBeforeInsertNode = null;
+        Shipment theShipment = insertNode.theShipment;
+
+        if (isDiagnostic){
+          System.out.println("========================================");
+          System.out.println("In InsertNodes in Nodeslinked list");
+          System.out.println("Nodes to be inserted " + theShipment.getIndex());
+          System.out.println("Route to be inserted " + this.getRouteString());
+          System.out.println("Cost before insertion " + this.getCost());
+        }
+
+        // the route is empty
+        if (head.getNext() == tail) {
+            head.setNext(insertNode);
+            tail.setPrev(insertNode);
+            insertNode.setPrev(head);
+            insertNode.setNext(tail);
+
+            pcBeforeInsertNode = head; //return head depot
+
+            if (isDiagnostic){
+              System.out.println("Route is empty");
+              System.out.println("After inserting the node " + this.getRouteString());
+            }
+
+            if (feasibility.isFeasible()) {
+                this.removeNodes(insertNode); //route is infeasible, remove this cell
+                if (isDiagnostic){
+                  System.out.println("Insertion infeasible - Returning null");
+                  System.out.println("Returning to original route " + this.getRouteString());
+                  System.out.println("================== Exiting insertNodes ");
+                }
+                return null;
+            }
+        }
+        // the route is not empty
+        else {
+            double cost = Double.MAX_VALUE;
+            Nodes costCell = null; //cell after which the new cell was inserted to achieve cost
+            Nodes prevCell = head;
+            Nodes nextCell = head.getNext();
+
+            if (isDiagnostic){
+              System.out.println("Route is not empty");
+            }
+
+            //loop through all the cells looking for the cheapest place to put the
+            //new cell.
+            while (nextCell != null) {
+                //insert the cell after current prevCell
+                prevCell.setNext(insertNode);
+                insertNode.setPrev(prevCell);
+                insertNode.setNext(nextCell);
+                nextCell.setPrev(insertNode);
+
+                //calculate the cost
+                //double tempCost = ProblemInfo.nodesLevelCostF.getTotalConstraintCost(this);
+                //double tempCost = 0; // ------------- FIX THIS ---------------
+                double tempCost = ProblemInfo.nodesLevelCostF.getTotalCost(this);
+                if (isDiagnostic){
+                  System.out.println("After inserting node " + this.getRouteString());
+                  System.out.println("Cost after insertion " + tempCost);
+                }
+
+                //check to see if the new route exceeds the maximum distance allowed
+                if (feasibility.isFeasible()) {
+                    //decide if this cell should be saved
+                    if (tempCost < cost) {
+                        cost = tempCost;
+                        costCell = prevCell;
+                    }
+                    if (isDiagnostic){
+                      System.out.println("Insertion is feasible ");
+                      System.out.println("Cost before and after insertion "+cost + " "+tempCost);
+                    }
+                }
+
+                //remove the new cell
+                prevCell.setNext(nextCell);
+                nextCell.setPrev(prevCell);
+                insertNode.setNext(null);
+                insertNode.setPrev(null);
+                if (isDiagnostic){
+                  System.out.println("After removing the node from the route " + this.getRouteString());
+                }
+
+
+                //set prevCell and nextCell to the next cells in linked list
+                prevCell = nextCell;
+                nextCell = prevCell.getNext();
+            }
+
+            if (costCell != null) {
+                //put the cell in the cheapest place you found
+                prevCell = costCell;
+                nextCell = prevCell.getNext();
+                prevCell.setNext(insertNode);
+                insertNode.setPrev(prevCell);
+                insertNode.setNext(nextCell);
+                nextCell.setPrev(insertNode);
+
+                pcBeforeInsertNode = prevCell;
+                if (isDiagnostic){
+                  System.out.println("Cost is not null");
+                  System.out.println("After inserting the cell in the cheapest place found" + this.getRouteString());
+                }
+
+            } else {
+              if (isDiagnostic){
+               System.out.println("Cost is null");
+             }
+
+                return null;
+            }
+        }
+
+        theShipment.setAssigned(true);
+        //ProblemInfo.nodesLevelCostF.calculateTotalsStats(this);
+        return pcBeforeInsertNode;
+    }
+
+    /**
+     * Insert Nodes after the specified Nodes.
+     * @param toInsert Nodes to be inserted
+     * @param afterThis Nodes in the route after which the other Nodes is
+     * to be inserted.
+     * @return returns beforePC if insertion is successful, returns null if insertion
+     * is not successful.
+     */
+    public Nodes insertAfterNodes(Nodes toInsert, Nodes afterThis) {
+        Nodes currentNode = head;
+
+        while (currentNode != tail) {
+            if (currentNode == afterThis) {
+                toInsert.setPrev(currentNode);
+                toInsert.setNext(currentNode.getNext());
+                currentNode.setNext(toInsert);
+                toInsert.getNext().setPrev(toInsert);
+                break;
+            }
+            currentNode = currentNode.getNext();
+        }
+        return currentNode;
+    }
+
+    /**
+     * Removes a Node from this route and returns the node that was
+     * before it.
+     * @param removeNode  Node to be removed from the route
+     * @return Node that was before the Node that was removed
+     */
+    public Nodes removeNodes(Nodes removeNode) {
+        Nodes currentNode = head.getNext();
+        Nodes nodeBeforeRemoveNode = null;
+
+        while (currentNode != tail) {
+            if (currentNode.getIndex() == removeNode.getIndex()) {
+                nodeBeforeRemoveNode = currentNode.getPrev();
+                currentNode.getPrev().setNext(currentNode.getNext());
+                currentNode.getNext().setPrev(currentNode.getPrev());
+                currentNode.setNext(null);
+                currentNode.setPrev(null);
+
+                break;
+            }
+            currentNode = currentNode.getNext();
+        }
+        return nodeBeforeRemoveNode;
+    }
+
+    /**
+     * This method will remove a node by its index
+     * @param index the index of the node to remove
+     * @return the node before the removed node
+     */
+    public Nodes removeNodeByIndex(int index) {
+        Nodes currentNode = head.getNext();
+        Nodes nodeBeforeRemoveNode = null;
+
+        while (currentNode != tail) {
+            if (currentNode.getIndex() == index) {
+                nodeBeforeRemoveNode = currentNode.getPrev();
+                currentNode.getPrev().setNext(currentNode.getNext());
+                currentNode.getNext().setPrev(currentNode.getPrev());
+                currentNode.setNext(null);
+                currentNode.setPrev(null);
+
+                break;
+            }
+
+            currentNode = currentNode.getNext();
+        }
+
+        return nodeBeforeRemoveNode;
+    }
+
+    /**
+      * Removes a Node from any route that it exists in and returns the
+      * Node that was before it.
+      * @param removeNode Nodes to be removed from any route
+      * @return Node that was before the Nodes removed
+      */
+    public Nodes removeFromOtherRoute(Nodes removeNode) {
+        if ((removeNode.getPrev() != null) && (removeNode.getNext() != null)) {
+            removeNode.getPrev().setNext(removeNode.getNext());
+            removeNode.getNext().setPrev(removeNode.getPrev());
+
+            return removeNode.getPrev();
+        } else {
+            return null;
+        }
+    }
+
+    /**
+     * Returns the Nodes at the specified position in the list.
+     * @param pos position of the Nodes to be returned
+     * @return Nodes at the specified position
+     */
+    public Nodes getNodesAtPosition(int pos) {
+        Nodes current = head;
+        int currentPos = 0;
+
+        while ((current != null) && (currentPos < pos)) {
+            current = current.getNext();
+            currentPos++;
+        }
+
+        return current;
+    }
+
+    /**
+     * This method will retrieve a node by its index
+     * @param index the index of the node to get
+     * @return Nodes the node, or null
+     */
+    public Nodes getNodeByIndex(int index) {
+        Nodes currentNode = head.getNext();
+
+        while (currentNode != tail) {
+            if (currentNode.getIndex() == index) {
+                return currentNode;
+            }
+            currentNode = currentNode.getNext();
+        }
+
+        return null;
+    }
+
+
+    /**
+      * Trims the route to one Nodes per stop so that the optimization
+      * methods work better.
+      *
+      * Original route looked like this: (S# - student:pick up point, D - depot)
+      * D - S1 - S1 - S1 - S1 - S2 - S2 - S2 - S2 - S3 - S3 - S3 - S3 - D
+      *
+      * Now looks like this:
+      * D
+      * |
+      * S1 - S1 - S1 - S1  each of these students at same pick up point
+      * |
+      * S2 - S2 - S2 - S2
+      * |
+      * S3 - S3 - S3 - S3
+      * |
+      * D
+      *
+      * This will prevent the optimization functions from splitting visits to pick
+      * up points.  These routes will have the same cost, because the distance has
+      * not changed. There is no additional distance for picking up multiple students
+      * from a pick up point.
+      */
+    public void collapseRoute() {
+        //if (!collapsed) {
+            Nodes tempCell = head.getNext(); //start at first pick up point
+            Nodes firstCellInPUP = null;
+            Nodes lastCellInPUP = null;
+            int tempDemand = 1;
+            String pupName = null; //name of the pick up point
+
+            try {
+                while (tempCell != tail) { //loop through all the cells until last depot
+
+                    if (!tempCell.getPickUpPointName().equals(pupName)) {
+                        //if we have found a new pick up point
+                        firstCellInPUP = tempCell; //save that cell
+                        pupName = tempCell.getPickUpPointName(); //save the name
+
+                        while ((tempCell.getNext() != tail) &&
+                                tempCell.getNext().getPickUpPointName().equals(pupName)) {
+                            tempDemand += tempCell.theShipment.getDemand();
+                            tempCell = tempCell.getNext();
+                        }
+
+                        lastCellInPUP = tempCell; //save the last cell
+                        tempCell = tempCell.getNext(); //incremant tempCell to next one
+
+                        firstCellInPUP.theShipment.tempNext = firstCellInPUP.getNext(); //connect cells in this PUP to tempNext
+                        firstCellInPUP.theShipment.tempDemand = firstCellInPUP.theShipment.getDemand();
+                        firstCellInPUP.theShipment.setDemand(tempDemand);
+                        firstCellInPUP.setNext(tempCell); //connect the first cell directly to the next PUP
+                        tempCell.setPrev(firstCellInPUP);
+
+                        if (firstCellInPUP != lastCellInPUP) {
+                            lastCellInPUP.setNext(null); //disconnect last cell from next PUP
+                        } else {
+                            firstCellInPUP.theShipment.tempNext = null; //only cell from this PUP, nothing to save
+                        }
+
+                        tempDemand = 1;
+                    } else {
+                        tempCell = tempCell.getNext();
+                    }
+                }
+            } catch (Exception e) {
+                System.out.println("Exception caught in collapseRoute() " + e);
+            }
+
+            collapsed = true;
+        //}
+    }
+
+    /**
+     * Expands the collapsed route to the original route. Extracts all the cells
+     * hidden by the collapseRoute() method.
+     */
+    public void expandRoute() {
+        //if (collapsed) {
+            Nodes tempCell = head.getNext();
+            Nodes endOfHidden = null;
+            Nodes startOfHidden = null;
+
+            try {
+                while (tempCell != tail) {
+                    if (tempCell.theShipment.tempNext != null) { //there are hidden cells
+                        startOfHidden = tempCell.theShipment.tempNext;
+
+                        //loop through all the hidden cell until you find the last
+                        while (startOfHidden.getNext() != null) {
+                            startOfHidden = startOfHidden.getNext();
+                        }
+
+                        endOfHidden = startOfHidden;
+                        startOfHidden = tempCell.theShipment.tempNext;
+
+                        //tempCell_hidden now equals the last hidden cell
+                        endOfHidden.setNext(tempCell.getNext()); //link the last hidden cell to the next pup
+                        tempCell.getNext().setPrev(endOfHidden);
+                        tempCell.setNext(tempCell.theShipment.tempNext); //reattach the first hidden cell
+                        tempCell.theShipment.tempNext = null;
+                        tempCell.theShipment.setDemand(tempCell.theShipment.tempDemand);
+                        tempCell.theShipment.tempDemand = -1;
+
+                        //increment tempCell
+                        tempCell = endOfHidden.getNext();
+                    } else {
+                        tempCell = tempCell.getNext();
+                    }
+                }
+            } catch (Exception e) {
+                System.out.println("Exception caught in expandRoute() " + e);
+            }
+
+            collapsed = false;
+       // }
+    }
+
+    /*public Object clone(){
+      NodesLinkedList clonedNodesLinkedList = new NodesLinkedList();
+
+      clonedNodesLinkedList.attributes = (Attributes) this.attributes.clone();
+      clonedNodesLinkedList.collapsed = this.collapsed;
+      clonedNodesLinkedList.feasibility = (Feasibility) this.feasibility.clone();
+      clonedNodesLinkedList.truckType = (TruckType) this.truckType.clone();
+      clonedNodesLinkedList.truckNum = this.truckNum;
+      clonedNodesLinkedList.head = (Nodes) this.head.clone();
+
+      this.expandRoute();
+
+      if(this.head != this.tail){
+        Nodes currentNodes = clonedNodesLinkedList.head;
+        Nodes nextNodes = this.getHead().getNext();
+
+        while(nextNodes != null){
+          currentNodes.setNext((Nodes) nextNodes.clone()); //create the next depot
+          currentNodes.getNext().setPrev(currentNodes); //set the next depot's prev
+          currentNodes = currentNodes.getNext();
+          nextNodes = nextNodes.getNext();
+
+          //once next is null, we have found the tail of the list
+          if(nextNodes == null){
+            clonedNodesLinkedList.tail = currentNodes;
+            currentNodes.setNext(null);
+          }
+
+        }
+      }
+
+      //Set the route for the feasibility
+      clonedNodesLinkedList.feasibility.setRoute(clonedNodesLinkedList);
+
+      return clonedNodesLinkedList;
+    }*/
+
+    /**
+     * Returns the truck number of this nodes linked list
+     * @return int truck number
+     */
+    public int getTruckNum(){
+      return truckNum;
+    }
+
+    /**
+     * Will return a string of all the pick up points in the route.
+     * @return String string of pick up points.
+     */
+    public String getRouteString(){
+      //use the string buffer because it performs better than using "" + ""
+      StringBuffer buf = new StringBuffer();
+
+      Nodes node = this.getHead();
+      while(node != null){
+        buf.append(node.getIndex()).append(" ");
+        node = node.getNext();
+      }
+
+      return buf.toString();
+    }
+
+    /**
+     * Sets the value for the collapsed
+     * @param collapseVal collapse is either set to true or false
+     */
+    public void setCollapsed(boolean collapsedVal) {
+        collapsed = collapsedVal;
+    }
+
+    /**
+    * Sets the value for feasibility
+    * @param collapseVal collapse is either set to true or false
+    */
+   public void setFeasibility(Feasibility feasibilityVal) {
+       feasibility = feasibilityVal;
+   }
+
+   /**
+    * Sets the truck type
+    * @param truckTypeVal value of the truckType
+    */
+   public void setTruckType(TruckType truckTypeVal) {
+       truckType = truckTypeVal;
+   }
+
+   /**
+       * Sets the truck number
+       * @param truckNumVal value of the truck number
+       */
+      public void setTruckNum(int truckNumVal) {
+          truckNum = truckNumVal;
+      }
+
+      /**
+       * Sets the head of the linked list
+       * @param headVal value of the head of the linked list
+       */
+      public void setHead(Nodes headVal) {
+         head = headVal;
+      }
+
+      /**
+       * Sets the tail of the linked list
+       * @param tailVal value of the tail of the linked list
+       */
+      public void setTail(Nodes tailVal) {
+         tail = tailVal;
+      }
+
+
+
+
+}

@@ -1,0 +1,12 @@
+[PropertyInfo]
+attributes,Attributes,false,false, , ,false,<default>
+head,Depot,false,false, , ,true,<default>
+numTrucksUsed,int,false,false, , ,true,<default>
+solutionString,String,false,false, , ,true,<default>
+tail,Depot,false,false, , ,true,<default>
+totalNumTrucksUsed,int,false,false, , ,true,<default>
+[IconNames]
+
+
+
+

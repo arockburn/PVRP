@@ -1,0 +1,661 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#	new file:   OS_PVRP_CPSC_464/Abstract.txt
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.lock
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.log
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/14/10659183c93e0014101dbb9fbbaf3037
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/1c/7053dbddc73e0014101dbb9fbbaf3037
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/21/d03ea6f7ce3e0014101dbb9fbbaf3037
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/28/50239c8dcf3e0014101dbb9fbbaf3037
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/33/00a0eb09fb3d00141239f1bc10581e12
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/45/6028fb39c83e0014101dbb9fbbaf3037
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/4b/70eb04c6c83e0014101dbb9fbbaf3037
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/4c/b06553adc93e0014101dbb9fbbaf3037
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/4e/b0f4b510cf3e0014101dbb9fbbaf3037
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/50/d079717df83d00141239f1bc10581e12
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/52/20a321b7fe3d00141239f1bc10581e12
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/52/80548fa2fd3d00141239f1bc10581e12
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/56/7077978ec83e0014101dbb9fbbaf3037
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/5a/3065e0f5c93e0014101dbb9fbbaf3037
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/5b/f0965ca3fa3d00141239f1bc10581e12
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/5e/209cb1f6fe3d00141239f1bc10581e12
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/62/e02dc010cf3e0014101dbb9fbbaf3037
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/63/2094cc3a023e00141239f1bc10581e12
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/65/000bbd3dcb3e0014101dbb9fbbaf3037
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/66/c034767df83d00141239f1bc10581e12
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/68/a012a6ddc73e0014101dbb9fbbaf3037
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/6a/1093e3f8c93e0014101dbb9fbbaf3037
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/6a/a01cf8d0c83e0014101dbb9fbbaf3037
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/74/706da480fc3d00141239f1bc10581e12
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/78/904c5589f83d00141239f1bc10581e12
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/7b/702acd61b83d00141004f928fdd23eca
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/7c/0071cfcdfa3d00141239f1bc10581e12
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/8/501031b6f83d00141239f1bc10581e12
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/84/b0cd16b7fe3d00141239f1bc10581e12
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/85/40f7eae5c83e0014101dbb9fbbaf3037
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/85/e0f8b23dcb3e0014101dbb9fbbaf3037
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/8a/b0f52c4bff3d00141239f1bc10581e12
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/8b/f062a7f6fe3d00141239f1bc10581e12
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/8c/b0f2b612fc3d00141239f1bc10581e12
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/96/509495e9fa3d00141239f1bc10581e12
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/9e/002fb411c83e0014101dbb9fbbaf3037
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/a8/f032b1e0cb3e0014101dbb9fbbaf3037
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/b6/50d5a73dcb3e0014101dbb9fbbaf3037
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/bb/600e0e7bf83d00141239f1bc10581e12
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/bd/f0adc211c83e0014101dbb9fbbaf3037
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/c/a083996bd03e0014101dbb9fbbaf3037
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/ce/80b79bf7ce3e0014101dbb9fbbaf3037
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/d4/90e2fa1fb83d00141004f928fdd23eca
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/d8/c0a54717f93d00141239f1bc10581e12
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/e2/a0d08ff7ce3e0014101dbb9fbbaf3037
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/eb/7027fbc5c83e0014101dbb9fbbaf3037
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/f4/6085a38ec83e0014101dbb9fbbaf3037
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/Zeus/.indexes/e4/b6/f6/aa/9/c4/8b/history.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/Zeus/.indexes/e4/b6/f6/aa/9/c4/history.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/Zeus/.indexes/e4/b6/f6/aa/9/history.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/Zeus/.indexes/history.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/Zeus/.markers
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/Zeus/org.eclipse.jdt.core/state.dat
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/history.version
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.version
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.root/4.tree
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.core.prefs
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.launching.prefs
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.m2e.discovery.prefs
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.pde.api.tools.prefs
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.team.ui.prefs
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.editors.prefs
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.prefs
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.debug.core/.launches/Zeus.launch
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.debug.ui/dialog_settings.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/1115467115.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/1244241647.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/1321324251.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/1498219845.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/163172794.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/1697886153.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/1818563445.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/1963035346.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/1995173708.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/2005818779.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/21185687.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/2304146637.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/2386571990.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/2617284902.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/271054239.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/305854171.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/3065916431.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/30765161.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/3133528496.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/3374370936.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/3685720439.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/3762639655.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/3763473545.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/3974580528.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/4041092966.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/4108727661.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/4155206848.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/4158071716.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/4173023868.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/469148321.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/881608008.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/invalidArchivesCache
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/javaLikeNames.txt
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.debug.ui/dialog_settings.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.launching/.install.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.launching/libraryInfos.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.5.0.20140606-0033.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/.metadata/version.ini
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.classpath
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.idea/.name
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.idea/codeStyleSettings.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.idea/compiler.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.idea/copyright/profiles_settings.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.idea/encodings.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.idea/misc.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.idea/modules.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.idea/scopes/scope_settings.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.idea/uiDesigner.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.idea/vcs.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.idea/workspace.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.metadata/.lock
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/history.version
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.version
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.metadata/.plugins/org.eclipse.core.resources/.root/2.tree
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.prefs
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.metadata/.plugins/org.eclipse.jdt.core/invalidArchivesCache
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.metadata/.plugins/org.eclipse.ui.intro/dialog_settings.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.metadata/version.ini
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.project
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.settings/org.eclipse.jdt.core.prefs
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/.settings/org.eclipse.ltk.core.refactoring.prefs
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/Libraries/RelativeLayout.jar
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/Libraries/XML File Reader/dom4j-1.6.1.jar
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/Libraries/XML File Reader/poi-3.10-FINAL-20140208.jar
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/Libraries/XML File Reader/poi-ooxml-3.10-FINAL-20140208.jar
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/Libraries/XML File Reader/poi-ooxml-schemas-3.10-FINAL-20140208.jar
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/Libraries/XML File Reader/stax-api-1.0.1.jar
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/Libraries/XML File Reader/xmlbeans-2.3.0.jar
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/Libraries/jbcl.jar
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/Libraries/jdom.jar
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/Libraries/joda-time-1.5.2.jar
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/Libraries/jxl.jar
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/Libraries/xercesImpl-2.9.1.jar
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/Libraries/xmlbeans-2.4.0.jar
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/Libraries/zeuscore.jar
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/Libraries/zeusqualityassurance.jar
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/Various_Classes.zip
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/Zeus.eml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/Zeus.iml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/classes/.gitignore
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/data/PVRP/data/input_1.xlsx
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/data/PVRP/data/input_2.xlsx
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/data/PVRP/data/p01_old.xlsx
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/data/PVRP/results/OUTPUT_input_2.xlsx
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/data/PVRP/results/~$OUTPUT_input_2.xlsx
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/data/vrp/Problems/mdvrp_p01.txt
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/data/vrp/Problems/vrp_problem_excel.xlsx
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/data/vrp/Results/mdvrp_p01.txt_long.txt
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/data/vrp/Results/mdvrp_p01.txt_short.txt.zip
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/data/vrp/Results/mdvrp_p01.txt_students.txt
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/allclasses-frame.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/allclasses-noframe.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/constant-values.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/deprecated-list.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/MDVRP.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/Root.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/SDMXSD.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/VRP.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/Zeus.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/core/Attributes.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/core/Depot.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/core/DepotLinkedList.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/core/Feasibility.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/core/Nodes.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/core/NodesLinkedList.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/core/ProblemInfo.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/core/Settings.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/core/Shipment.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/core/ShipmentLinkedList.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/core/Truck.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/core/TruckLinkedList.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/core/TruckType.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/core/XMLString.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/core/package-frame.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/core/package-summary.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/core/package-tree.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/costfunctions/BasicDepotCostFunctions.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/costfunctions/BasicDepotLLCostFunctions.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/costfunctions/BasicTruckCostFunctions.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/costfunctions/BasicTruckLLCostFunctions.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/costfunctions/BasicVNodesCostFunctions.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/costfunctions/CostFunctions.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/costfunctions/package-frame.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/costfunctions/package-summary.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/costfunctions/package-tree.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/InterOpt.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/IntraOpt.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/OptInfo.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/Optimization.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/OptimizationUnit.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/SearchStrategy.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/SwapConfirm.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/UpperBoundConfirm.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/interopts/AnExchange.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/interopts/BestBestInterSearch.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/interopts/Exchange01.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/interopts/Exchange01Unit.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/interopts/Exchange02.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/interopts/Exchange02Unit.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/interopts/Exchange10.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/interopts/Exchange10Unit.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/interopts/Exchange11.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/interopts/Exchange11Unit.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/interopts/Exchange12.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/interopts/Exchange12Unit.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/interopts/Exchange20.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/interopts/Exchange20Unit.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/interopts/Exchange21.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/interopts/Exchange21Unit.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/interopts/Exchange22.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/interopts/Exchange22Unit.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/interopts/Exchanges.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/interopts/FirstBestInterSearch.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/interopts/FirstFirstInterSearch.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/interopts/InterOptimization.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/interopts/package-frame.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/interopts/package-summary.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/interopts/package-tree.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/intraopts/BestBestIntraSearch.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/intraopts/FirstBestIntraSearch.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/intraopts/FirstFirstIntraSearch.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/intraopts/IntraOptimization.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/intraopts/KThreeForward.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/intraopts/KThreeForwardOptUnit.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/intraopts/KThreeReverse.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/intraopts/KThreeReverseOptUnit.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/intraopts/KTwoForward.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/intraopts/KTwoForwardOptUnit.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/intraopts/KTwoReverse.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/intraopts/KTwoReverseOptUnit.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/intraopts/LocalOneOpt.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/intraopts/LocalThreeOpt.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/intraopts/LocalTwoOpt.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/intraopts/OneOpt.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/intraopts/OneOptUnit.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/intraopts/ThreeOpt.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/intraopts/ThreeOptUnit.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/intraopts/TwoOpt.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/intraopts/TwoOptUnit.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/intraopts/package-frame.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/intraopts/package-summary.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/intraopts/package-tree.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/mixedfleet/Combination.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/mixedfleet/Combination1.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/mixedfleet/MixedFleetOptimization.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/mixedfleet/Reallocation.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/mixedfleet/Reduction.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/mixedfleet/RelaxCombine.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/mixedfleet/RelaxShare.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/mixedfleet/ShareCombine.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/mixedfleet/Sharing.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/mixedfleet/Util.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/mixedfleet/package-frame.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/mixedfleet/package-summary.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/mixedfleet/package-tree.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/package-frame.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/package-summary.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/localopts/package-tree.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/cyclictransfer/CyclicTransfer.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/cyclictransfer/package-frame.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/cyclictransfer/package-summary.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/cyclictransfer/package-tree.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/optcrawler/OptCrawler.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/optcrawler/OptNode.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/optcrawler/package-frame.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/optcrawler/package-summary.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/optcrawler/package-tree.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/passiveantcolonysearch/PassiveAntColonySearch.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/passiveantcolonysearch/PassiveAntConfirm.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/passiveantcolonysearch/package-frame.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/passiveantcolonysearch/package-summary.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/passiveantcolonysearch/package-tree.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/simulatedannealing/CoolingSchedule.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/simulatedannealing/CosineCoolingSchedule.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/simulatedannealing/InversePowerCoolingSchedule.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/simulatedannealing/LinearCoolingSchedule.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/simulatedannealing/MetropolisMonteCarloConfirm.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/simulatedannealing/SimulatedAnnealing.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/simulatedannealing/package-frame.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/simulatedannealing/package-summary.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/simulatedannealing/package-tree.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/tabu/ExchangesOperation.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/tabu/GeneralTools.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/tabu/Operation.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/tabu/SelectExchange.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/tabu/TabuConstants.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/tabu/TabuDepot.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/tabu/TabuDepotLinkedList.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/tabu/TabuOperation.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/tabu/TabuOperationLinkedList.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/tabu/TabuProblemInfo.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/tabu/TabuSearch.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/tabu/TabuSimulatedAnnealing.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/tabu/TabuSwapConfirm.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/tabu/TabuTruck.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/tabu/TabuTruckLinkedList.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/tabu/package-frame.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/tabu/package-summary.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/tabu/package-tree.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/tabu/tabuopts/TabuExchange01.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/tabu/tabuopts/package-frame.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/tabu/tabuopts/package-summary.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/metaheuristics/tabu/tabuopts/package-tree.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/package-frame.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/package-summary.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/package-tree.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/qualityassurance/QADepot.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/qualityassurance/QADepotLinkedList.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/qualityassurance/QANode.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/qualityassurance/QANodesLinkedList.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/qualityassurance/QAShipment.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/qualityassurance/QAShipmentLinkedList.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/qualityassurance/QATruck.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/qualityassurance/QATruckLinkedList.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/qualityassurance/QualityAssurance.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/qualityassurance/package-frame.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/qualityassurance/package-summary.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/qualityassurance/package-tree.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/route/Attributes.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/route/Depot.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/route/DepotLinkedList.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/route/Feasibility.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/route/PointCell.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/route/ProblemInfo.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/route/Shipment.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/route/ShipmentLinkedList.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/route/Truck.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/route/TruckLinkedList.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/route/TruckType.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/route/VisitNodesLinkedList.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/route/package-frame.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/route/package-summary.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/route/package-tree.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/userinterface/BorlandIndependantDisplay.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/userinterface/CustomCellRenderer.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/userinterface/DepotFrame.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/userinterface/DesktopMenuBar.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/userinterface/InfoFrame.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/userinterface/MainFrame.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/userinterface/OptLoopConfig.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/userinterface/OptimizationFrame.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/userinterface/OptimizationPanel.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/userinterface/RouteDisplay.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/userinterface/RunOptLoopThread.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/userinterface/RunOptPanel.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/userinterface/RunningOptPanel.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/userinterface/SBVRPGUI.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/userinterface/ShipmentFrame.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/userinterface/ZeusGraph.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/userinterface/ZeusGui.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/userinterface/checkboxtree/CheckTreeCellEditor.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/userinterface/checkboxtree/CheckTreeCellRenderer.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/userinterface/checkboxtree/CheckTreeNode.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/userinterface/checkboxtree/JCheckTree.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/userinterface/checkboxtree/SwingEventMulticaster.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/userinterface/checkboxtree/package-frame.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/userinterface/checkboxtree/package-summary.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/userinterface/checkboxtree/package-tree.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/userinterface/package-frame.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/userinterface/package-summary.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/userinterface/package-tree.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/vrp/LinearGreedyInsertShipment.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/vrp/VRP.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/vrp/VRPAttributes.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/vrp/VRPDepot.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/vrp/VRPDepotLinkedList.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/vrp/VRPFeasibility.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/vrp/VRPNodes.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/vrp/VRPNodesLinkedList.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/vrp/VRPShipment.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/vrp/VRPShipmentLinkedList.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/vrp/VRPTruck.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/vrp/VRPTruckLinkedList.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/vrp/VRPTruckType.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/vrp/package-frame.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/vrp/package-summary.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/vrp/package-tree.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/vrp/vrpqualityassurance/VRPQADepot.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/vrp/vrpqualityassurance/VRPQADepotLinkedList.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/vrp/vrpqualityassurance/VRPQANode.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/vrp/vrpqualityassurance/VRPQANodesLinkedList.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/vrp/vrpqualityassurance/VRPQAShipment.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/vrp/vrpqualityassurance/VRPQAShipmentLinkedList.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/vrp/vrpqualityassurance/VRPQATruck.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/vrp/vrpqualityassurance/VRPQATruckLinkedList.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/vrp/vrpqualityassurance/VRPQualityAssurance.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/vrp/vrpqualityassurance/package-frame.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/vrp/vrpqualityassurance/package-summary.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/edu/sru/thangiah/zeus/vrp/vrpqualityassurance/package-tree.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/help-doc.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/index-all.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/index.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/overview-frame.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/overview-summary.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/overview-tree.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/package-list
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/packages.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/resources/inherit.gif
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/serialized-form.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/doc/stylesheet.css
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/etc/AboutWindowLayout.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/etc/DepotFrameLayout.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/etc/RouteDisplayFrameLayout.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/java/lang/annotations.xml
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/Zeus.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/gui/AboutFrame.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/gui/CustomCellRenderer.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/gui/DepotFrame.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/gui/DesktopMenuBar.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/gui/FeatureFrame.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/gui/InfoFrame.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/gui/MainFrame.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/gui/OptLoopConfig.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/gui/OptimizationFrame.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/gui/OptimizationPanel.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/gui/RouteDisplayFrame.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/gui/RunOptLoopThread.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/gui/RunOptPanel.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/gui/RunningOptPanel.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/gui/SBVRPGUI.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/gui/ShipmentFrame.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/gui/ZeusGraph.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/gui/ZeusGui.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/gui/ZeusGuiInfo.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/gui/ZeusRouteDisplay.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/gui/checkboxtree/CheckTreeCellEditor.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/gui/checkboxtree/CheckTreeCellRenderer.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/gui/checkboxtree/CheckTreeNode.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/gui/checkboxtree/JCheckTree.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/gui/checkboxtree/SwingEventMulticaster.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/gui/checkboxtree/package.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/gui/package.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/package.html
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/PVRP.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/PVRPAttributes.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/PVRPDepot.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/PVRPDepotLinkedList.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/PVRPExcelReadWrite.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/PVRPExcel__OLD.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/PVRPFeasibility.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/PVRPNodes.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/PVRPProblemInfo.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/PVRPRoot.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/PVRPShipment.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/PVRPShipmentLinkedList/ClosestEuclideanDistanceToDepot.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/PVRPShipmentLinkedList/PVRPShipmentLinkedList.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/PVRPShipmentLinkedList/SmallestPolarAngleShortestDistanceToDepot.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/PVRPShipmentLinkedList/SmallestPolarAngleToDepot.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/PVRPTruck.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/PVRPTruckLinkedList.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/PVRPTruckType.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/pvrpcostfunctions/PVRPAbstractCostFunctions.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/pvrpcostfunctions/PVRPDepotCostFunctions.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/pvrpcostfunctions/PVRPDepotLLCostFunctions.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/pvrpcostfunctions/PVRPNodesLLCostFunctions.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/pvrpcostfunctions/PVRPTruckCostFunctions.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/pvrpcostfunctions/PVRPTruckLLCostFunctions.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/pvrpnodeslinkedlist/LinearGreedyInsertShipment.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/pvrpnodeslinkedlist/PVRPNodesLinkedList.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/pvrpqualityassurance/PVRPQADepot.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/pvrpqualityassurance/PVRPQADepotLinkedList.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/pvrpqualityassurance/PVRPQANode.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/pvrpqualityassurance/PVRPQANodesLinkedList.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/pvrpqualityassurance/PVRPQAShipment.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/pvrpqualityassurance/PVRPQAShipmentLinkedList.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/pvrpqualityassurance/PVRPQATruck.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/pvrpqualityassurance/PVRPQATruckLinkedList.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/pvrp/pvrpqualityassurance/PVRPQualityAssurance.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/VRP.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/VRPAttributes.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/VRPDepot.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/VRPDepotLinkedList.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/VRPExcelSupport.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/VRPFeasibility.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/VRPNodes.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/VRPNodesLinkedList.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/VRPNodesLinkedList.java.qwr
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/VRPProblemInfo.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/VRPRoot.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/VRPShipment.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/VRPShipmentLinkedList.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/VRPTruck.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/VRPTruckLinkedList.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/VRPTruckType.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/vrpcostfunctions/VRPAbstractCostFunctions.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/vrpcostfunctions/VRPDepotCostFunctions.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/vrpcostfunctions/VRPDepotLLCostFunctions.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/vrpcostfunctions/VRPNodesLLCostFunctions.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/vrpcostfunctions/VRPTruckCostFunctions.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/vrpcostfunctions/VRPTruckLLCostFunctions.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/vrpqualityassurance/VRPQADepot.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/vrpqualityassurance/VRPQADepotLinkedList.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/vrpqualityassurance/VRPQANode.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/vrpqualityassurance/VRPQANodesLinkedList.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/vrpqualityassurance/VRPQAShipment.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/vrpqualityassurance/VRPQAShipmentLinkedList.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/vrpqualityassurance/VRPQATruck.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/vrpqualityassurance/VRPQATruckLinkedList.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/src/edu/sru/thangiah/zeus/vrp/vrpqualityassurance/VRPQualityAssurance.java
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/temp/ship.txt
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/temp/sol.txt
+#	new file:   OS_PVRP_CPSC_464/DrSam PVRP Workspace/Zeus/temp/solRoadSeg.txt
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/new/best/pr01.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/new/best/pr02.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/new/best/pr03.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/new/best/pr04.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/new/best/pr05.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/new/best/pr06.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/new/best/pr07.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/new/best/pr08.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/new/best/pr09.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/new/best/pr10.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/new/pr01
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/new/pr02
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/new/pr03
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/new/pr04
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/new/pr05
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/new/pr06
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/new/pr07
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/new/pr08
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/new/pr09
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/new/pr10
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p01.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p02.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p03.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p04.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p05.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p06.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p07.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p08.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p09.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p10.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p11.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p12.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p13.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p14.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p15.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p16.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p17.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p18.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p19.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p20.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p21.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p22.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p23.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p24.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p25.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p26.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p27.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p28.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p29.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p30.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p31.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/best/p32.res
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p01
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p02
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p03
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p04
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p05
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p06
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p07
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p08
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p09
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p10
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p11
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p12
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p13
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p14
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p15
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p16
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p17
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p18
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p19
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p20
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p21
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p22
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p23
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p24
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p25
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p26
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p27
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p28
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p29
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p30
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p31
+#	new file:   OS_PVRP_CPSC_464/PVRP_Data/old/p32
+#	new file:   OS_PVRP_CPSC_464/README.md
+#	new file:   OS_PVRP_CPSC_464/Zeus_Core/Attributes.java
+#	new file:   OS_PVRP_CPSC_464/Zeus_Core/Carrier.java
+#	new file:   OS_PVRP_CPSC_464/Zeus_Core/CarrierLinkedList.java
+#	new file:   OS_PVRP_CPSC_464/Zeus_Core/CostFunctions.java
+#	new file:   OS_PVRP_CPSC_464/Zeus_Core/Depot.java
+#	new file:   OS_PVRP_CPSC_464/Zeus_Core/DepotLinkedList.java
+#	new file:   OS_PVRP_CPSC_464/Zeus_Core/Feasibility.java
+#	new file:   OS_PVRP_CPSC_464/Zeus_Core/Nodes.java
+#	new file:   OS_PVRP_CPSC_464/Zeus_Core/NodesLinkedList.java
+#	new file:   OS_PVRP_CPSC_464/Zeus_Core/ProblemInfo.java
+#	new file:   OS_PVRP_CPSC_464/Zeus_Core/Settings.java
+#	new file:   OS_PVRP_CPSC_464/Zeus_Core/Shipment.java
+#	new file:   OS_PVRP_CPSC_464/Zeus_Core/ShipmentLinkedList.java
+#	new file:   OS_PVRP_CPSC_464/Zeus_Core/Truck.java
+#	new file:   OS_PVRP_CPSC_464/Zeus_Core/TruckLinkedList.java
+#	new file:   OS_PVRP_CPSC_464/Zeus_Core/TruckType.java
+#
+

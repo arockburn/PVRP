@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inheritJdk="true">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="jbcl.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/Libraries/jbcl.jar!/"/>
+	</lib>
+	<lib name="jdom.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/Libraries/jdom.jar!/"/>
+	</lib>
+	<lib name="joda-time-1.5.2.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/Libraries/joda-time-1.5.2.jar!/"/>
+	</lib>
+	<lib name="jxl.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/Libraries/jxl.jar!/"/>
+	</lib>
+	<lib name="RelativeLayout.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/Libraries/RelativeLayout.jar!/"/>
+	</lib>
+	<lib name="xercesImpl-2.9.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/Libraries/xercesImpl-2.9.1.jar!/"/>
+	</lib>
+	<lib name="xmlbeans-2.4.0.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/Libraries/xmlbeans-2.4.0.jar!/"/>
+	</lib>
+	<lib name="zeuscore.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/Libraries/zeuscore.jar!/"/>
+	</lib>
+	<lib name="zeusqualityassurance.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/Libraries/zeusqualityassurance.jar!/"/>
+	</lib>
+	<lib name="dom4j-1.6.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/Libraries/XML File Reader/dom4j-1.6.1.jar!/"/>
+	</lib>
+	<lib name="poi-3.10-FINAL-20140208.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/Libraries/XML File Reader/poi-3.10-FINAL-20140208.jar!/"/>
+	</lib>
+	<lib name="poi-ooxml-3.10-FINAL-20140208.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/Libraries/XML File Reader/poi-ooxml-3.10-FINAL-20140208.jar!/"/>
+	</lib>
+	<lib name="poi-ooxml-schemas-3.10-FINAL-20140208.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/Libraries/XML File Reader/poi-ooxml-schemas-3.10-FINAL-20140208.jar!/"/>
+	</lib>
+	<lib name="stax-api-1.0.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/Libraries/XML File Reader/stax-api-1.0.1.jar!/"/>
+	</lib>
+	<lib name="xmlbeans-2.3.0.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/Libraries/XML File Reader/xmlbeans-2.3.0.jar!/"/>
+	</lib>
+</component>
